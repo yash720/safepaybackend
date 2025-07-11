@@ -57,7 +57,7 @@ app.use(session({
     ttl: config.SESSION_TTL // Use config for session TTL
   }),
   cookie: {
-    maxAge: config.SESSION_TTL, // Use config for cookie maxAge
+    maxAge: config.SESSION_TTL || 86400000, // Use config for cookie maxAge
     secure: false,
     httpOnly: true,
     sameSite: 'lax',
